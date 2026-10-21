@@ -62,6 +62,30 @@ export async function deleteConversation(token, conversationId) {
   });
 }
 
+export async function startAgentWorkflow({ task, provider }, token) {
+  const data = await request("/agents/workflows", {
+    method: "POST",
+    token,
+    body: JSON.stringify({
+      task,
+      ...(provider ? { provider } : {}),
+    }),
+  });
+  return data.workflow;
+}
+
+export async function getAgentWorkflow(token, workflowId) {
+  const data = await request(`/agents/workflows/${encodeURIComponent(workflowId)}`, {
+    token,
+  });
+  return data.workflow;
+}
+
+export async function listAgentWorkflows(token) {
+  const data = await request("/agents", { token });
+  return data.workflows;
+}
+
 export async function sendMessage(message, history = [], token, conversationId) {
   const context = history
     .filter((item) => item.role === "user" || item.role === "assistant")

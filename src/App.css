@@ -869,3 +869,382 @@
     padding: 28px 22px;
   }
 }
+
+.agent-nav-button {
+  margin-top: 8px;
+}
+
+.agent-nav-button.is-selected {
+  border-color: #d6d5c8;
+  background: #ebeae2;
+}
+
+.agent-workspace-content {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px clamp(18px, 5vw, 64px);
+  overflow-y: auto;
+}
+
+.agent-task-form {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: 22px;
+  border: 1px solid #e8e6dd;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.agent-task-form .welcome-kicker {
+  margin-bottom: 7px;
+  font-size: 9px;
+  font-weight: 650;
+  letter-spacing: 1.1px;
+}
+
+.agent-task-form h2,
+.agent-workflow-heading h2,
+.agent-empty-state h2 {
+  margin: 0;
+  color: #36372f;
+  font-size: 18px;
+  font-weight: 570;
+  letter-spacing: -0.45px;
+}
+
+.agent-description {
+  margin: 8px 0 18px;
+  color: #88877d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.agent-field-label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  color: #66675e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.agent-task-input {
+  display: block;
+  width: 100%;
+  min-height: 112px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid #e4e2d9;
+  border-radius: 10px;
+  outline: none;
+  color: #37382f;
+  background: rgba(255, 255, 255, 0.8);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.agent-task-input:focus,
+.agent-provider-select:focus-visible {
+  border-color: #aaa991;
+  box-shadow: 0 0 0 3px rgba(124, 125, 97, 0.1);
+}
+
+.agent-task-input::placeholder {
+  color: #aaa99d;
+}
+
+.agent-form-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+}
+
+.agent-provider-select {
+  min-width: 190px;
+  min-height: 38px;
+  padding: 0 10px;
+  border: 1px solid #e4e2d9;
+  border-radius: 9px;
+  outline: none;
+  color: #55564c;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+}
+
+.agent-start-button {
+  min-height: 40px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 10px;
+  color: #fffdf7;
+  background: #7c7d61;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.agent-start-button:hover:not(:disabled) {
+  background: #68694f;
+}
+
+.agent-start-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.agent-error {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border: 1px solid #efd6d1;
+  border-radius: 9px;
+  color: #944d47;
+  background: #fbefec;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.agent-results {
+  display: grid;
+  width: min(100%, 1100px);
+  grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.8fr);
+  align-items: start;
+  gap: 22px;
+  margin: 0 auto;
+}
+
+.agent-history,
+.agent-workflow-detail,
+.agent-empty-state {
+  padding: 18px;
+  border: 1px solid #e8e6dd;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.62);
+}
+
+.agent-workflow-list,
+.agent-stage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.agent-workflow-item {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #55564c;
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.agent-workflow-item:hover,
+.agent-workflow-item.is-active {
+  border-color: #e4e2d9;
+  background: #f5f4ef;
+}
+
+.agent-workflow-task {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 11px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.agent-workflow-meta,
+.agent-stage-status,
+.agent-stage-meta {
+  color: #96958a;
+  font-size: 9px;
+  text-transform: capitalize;
+}
+
+.agent-workflow-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.agent-workflow-heading h2 {
+  overflow-wrap: anywhere;
+}
+
+.agent-status {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #6d704f;
+  background: #eeefe5;
+  font-size: 9px;
+  text-transform: capitalize;
+}
+
+.agent-status-failed {
+  color: #944d47;
+  background: #fbefec;
+}
+
+.agent-progress-track {
+  height: 6px;
+  margin-top: 16px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #eeede6;
+}
+
+.agent-progress-track span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #85866b;
+  transition: width 250ms ease;
+}
+
+.agent-stage {
+  padding: 12px 0;
+  border-top: 1px solid rgba(230, 228, 219, 0.75);
+}
+
+.agent-stage-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.agent-stage-heading h3 {
+  margin: 0;
+  color: #55564c;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.agent-stage-status {
+  margin-left: auto;
+}
+
+.agent-stage-indicator {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #d2d1c7;
+}
+
+.agent-stage-running {
+  background: #b58a4c;
+  box-shadow: 0 0 0 3px rgba(181, 138, 76, 0.13);
+}
+
+.agent-stage-completed {
+  background: #8a9a70;
+}
+
+.agent-stage-failed {
+  background: #b76b5e;
+}
+
+.agent-stage-output {
+  margin: 10px 0 0 16px;
+  color: #55564c;
+  font-size: 12px;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+
+.agent-stage-meta {
+  margin: 8px 0 0 16px;
+  text-transform: none;
+}
+
+.agent-empty-state {
+  display: grid;
+  min-height: 210px;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+}
+
+.agent-empty-state .welcome-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 0 14px;
+  border-radius: 13px;
+  font-size: 20px;
+}
+
+.agent-empty-state h2 {
+  font-size: 15px;
+}
+
+.agent-empty-state p {
+  max-width: 320px;
+  margin: 8px 0 0;
+  color: #88877d;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 760px) {
+  .agent-workspace-content {
+    padding: 18px 16px;
+  }
+
+  .agent-results {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .agent-history {
+    order: 2;
+  }
+}
+
+@media (max-width: 420px) {
+  .agent-task-form,
+  .agent-history,
+  .agent-workflow-detail {
+    padding: 14px;
+  }
+
+  .agent-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .agent-provider-select,
+  .agent-start-button {
+    width: 100%;
+  }
+}
